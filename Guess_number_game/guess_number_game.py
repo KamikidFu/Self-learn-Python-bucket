@@ -1,6 +1,6 @@
 #Using Pythong 3.6.1 on Windows 7
 #Kamikid, 17/Jun/17
-#API about random module is at https://docs.python.org/3.6/library/random.html#random.random
+#More about random module is at https://docs.python.org/3.6/library/random.html#random.random
 
 import random   #Import random module for generating random number
 
