@@ -3,6 +3,11 @@
 Welcome to this repository, if you feel this is helpful, please star it at the top of page.
 >**Please note:** This git repository is about my exploring on the Python after finished the basic course from [Udacity](https://www.udacity.com/course/programming-foundations-with-python--ud036) (Using Python 2.7.9, [See my Udacity study repository](https://github.com/KamikidFu/Udacity-Python-Basic)) and the Python 3 Tutorial (Using Python 3 or above) from [SoloLearn](https://www.sololearn.com/Course/Python/).
 
+## What are in bucket?
+|#|Name|Brief|
+|:-:|:-|:-|
+|0|[Guess number game](https://github.com/KamikidFu/Self-learn-Python-bucket/tree/master/Guess_number_game)|One of popular program cases when studying a new language|
+
 ## About License
 
 May I announce that this repository is protected by [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
