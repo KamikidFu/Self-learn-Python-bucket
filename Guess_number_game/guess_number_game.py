@@ -1,7 +1,7 @@
 #Using Pythong 3.6.1 on Windows 7
 #Kamikid, 17/Jun/17
 #More about random module is at https://docs.python.org/3.6/library/random.html#random.random
-#Version:1.2
+#Version:1.3
 
 import random   #Import random module for generating random number
 
@@ -11,6 +11,9 @@ guess_times = 3
 
 while(guess_times!=0):    #Only test if the restart is Y or y to run the game
     temp = input("Hello there, would you like to input a number between 0 to 9 inclusively to guess what your computer is thinking about?\n")
+    if (not temp[0].isdigit()) or len(temp)!=1:
+        print("Illegal input, please check!")
+        continue
     int_temp = int(temp)
     if int_temp==guess:                #Check the two number, using int() to parse str to int
         print("Yes, you are right!")
