@@ -1,7 +1,7 @@
 # Brief
 ****
 This program is a simple, text-based game.
-Current version: 1.0
+Current version: 1.3
 ****
 |BIF Used|Structure Used|Module Used|
 |:------:|:------------:|:---------:|
