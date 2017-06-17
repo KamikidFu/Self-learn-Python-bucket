@@ -12,6 +12,9 @@ Current version: 1.0
 
 ## Update
 1.3 Run game more safely without errors when changing type
+
 1.2 Game only offers three times for player to guess in one round.
+
 1.1 The game will give a message to player whether the number player guessed is bigger or smaller than what the computer thinks.
+
 1.0 Finish the base game.
