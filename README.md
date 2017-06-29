@@ -7,6 +7,7 @@ Welcome to this repository, if you feel this is helpful, please star it at the t
 |#|Name|Brief|
 |:-:|:-|:-|
 |0|[Guess number game](https://github.com/KamikidFu/Self-learn-Python-bucket/tree/master/Guess_number_game)|One of popular program cases when studying a new language|
+|1|[DataStructure_Graph](https://github.com/KamikidFu/Self-learn-Python-bucket/tree/master/DataStructure_Graph)|New topic on data structure of graph|
 
 ## About License
 
