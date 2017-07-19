@@ -1,5 +1,6 @@
 import mygraph
 import mylist
+import myarray
 import random
 import pdb
 #mygraph.GraphAdjacentMaterix():
@@ -34,13 +35,18 @@ def test_linked_list():
         linkedlist.add_node(random.randint(0,99))
     print(str("Size: "+str(linkedlist.get_size())))
     
-    print("---LINKEDLIST WITH NEW DATA---")
+    print("---SHOW LINKEDLIST WITH INITIAL DATA---")
     linkedlist.print_list()
 
     print("---TEST DELETE FUNCTION WITH DATA---")
     data = input("Input the data in linked list: ")
     #pdb.set_trace()
-    linkedlist.del_node_by_data(int(data))
+    while True:
+        if linkedlist.find_node_by_data(int(data)) != None:
+            linkedlist.del_node_by_data(int(data))
+            break
+        else:
+            data = input("Data not in linked list, retype data: ")
     print("---TEST PRINT NEW LIST AFTER DELETE "+str(data)+"---")
     linkedlist.print_list()
     
@@ -50,7 +56,29 @@ def test_linked_list():
     linkedlist.del_node_by_index(index)
     print("---TEST PRINT NEW LIST AFTER DELETE AT INDEX "+str(index)+"---")
     linkedlist.print_list()
-    
+
+def test_array():
+    init_length_of_list = random.randint(1,9)
+    print("\n---START TESTING---\nInitial Length: "+str(init_length_of_list))
+    array = myarray.DynamicArray()
+    for i in range(init_length_of_list):
+        array.append(random.randint(0,99))
+
+    print("---SHOW ARRAY WITH INITIAL DATA---")
+    array.print_array()
+
+    print("---TEST DELETE FUNCTION WITH DATA---")
+    data = input("Input the data in array: ")
+    #pdb.set_trace()
+    while True:
+        if array.has_data(int(data)):
+            array.delete_by_data(int(data))
+            break
+        else:
+            data = input("Data not in array, retype data: ")
+    print("---TEST PRINT NEW ARRAY AFTER DELETE "+str(data)+"---")
+    array.print_array()
 
 test_graph_adjacent_matrix()
 test_linked_list()
+test_array()

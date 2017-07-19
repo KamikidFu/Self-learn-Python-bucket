@@ -16,9 +16,12 @@ class LinkedList():
 
     def find_node_by_data(self, data):
         cur = self._head
-        while(cur.get_data()!=data):
-            cur = cur.get_next()
-        return cur
+        while cur != None:
+            if(cur.get_data() == data):
+                return cur
+            else:
+                cur = cur.get_next()
+        return None
 
     def find_node_by_index(self, index):
         cur = self._head
@@ -45,6 +48,11 @@ class LinkedList():
     def del_node_by_index(self, index):
         cur = self._head
         pre = Node
+
+        if index == 0:
+            self._head = cur.get_next()
+            return
+        
         for i in range(index):
             pre = cur
             cur = cur.get_next()
