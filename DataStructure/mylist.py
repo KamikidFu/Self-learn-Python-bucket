@@ -27,18 +27,33 @@ class LinkedList():
         return cur
     
     def del_node_by_data(self, data):
-        cur = self.find_node_by_data(data)
-        pre = self._head
-        while(pre.get_next().get_data()==cur.get_data()):
-            pre = pre.get_next()
-        pre.set_next(cur.get_next())
+        cur = self._head
+        pre = None
+        while cur:
+            if cur.get_data() == data:
+                if pre:
+                    pre.set_next(cur.get_next())
+                else:
+                    self._head = cur
+                self._count -= 1
+                return
+            else:
+                pre = cur
+                cur = cur.get_next()
+        return
 
     def del_node_by_index(self, index):
-        cur = self.find_node_by_index(index)
-        pre = self._head
-        while(pre.get_next().get_data()==cur.get_data()):
-            pre = pre.get_next()
-        pre.set_next(cur.get_next())
+        cur = self._head
+        pre = Node
+        for i in range(index):
+            pre = cur
+            cur = cur.get_next()
+        if pre:
+            pre.set_next(cur.get_next())
+        else:
+            self._head = cur
+        self._count -= 1
+        return
 
     def print_list(self):
         output = ""

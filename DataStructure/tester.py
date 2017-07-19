@@ -1,7 +1,7 @@
 import mygraph
 import mylist
 import random
-    
+import pdb
 #mygraph.GraphAdjacentMaterix():
 #Constructor contains two fields
 #No.1 How many vertexs in graph. Range:[2,+∞), by this tester, range is [2,9]
@@ -27,19 +27,28 @@ def test_graph_adjacent_matrix():
         matrix.show_graph()
 
 def test_linked_list():
-    length_of_list = random.randint(1,9)
-    print("\n---START TESTING---\nLength: "+str(length_of_list))
+    init_length_of_list = random.randint(1,9)
+    print("\n---START TESTING---\nInitial Length: "+str(init_length_of_list))
     linkedlist = mylist.LinkedList(random.randint(0,99))
-    for i in range(length_of_list):
+    for i in range(init_length_of_list):
         linkedlist.add_node(random.randint(0,99))
-    print(str(linkedlist.get_size()))
+    print(str("Size: "+str(linkedlist.get_size())))
+    
     print("---LINKEDLIST WITH NEW DATA---")
     linkedlist.print_list()
+
+    print("---TEST DELETE FUNCTION WITH DATA---")
+    data = input("Input the data in linked list: ")
+    #pdb.set_trace()
+    linkedlist.del_node_by_data(int(data))
+    print("---TEST PRINT NEW LIST AFTER DELETE "+str(data)+"---")
+    linkedlist.print_list()
     
-    index = random.randint(0,length_of_list)
+    index = random.randint(0,len(linkedlist)-1)    
     print("---TEST DELETE FUNCTION AT INDEX "+str(index)+"---")
+    #pdb.set_trace()
     linkedlist.del_node_by_index(index)
-    print("---TEST PRINT NEW LIST---")
+    print("---TEST PRINT NEW LIST AFTER DELETE AT INDEX "+str(index)+"---")
     linkedlist.print_list()
     
 
