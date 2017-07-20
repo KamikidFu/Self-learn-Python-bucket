@@ -2,7 +2,21 @@
 #Similar to anagram check, record all the chars in string one and
 #check the second string with the record. Finally output all the
 #records which the number associated with is not 0
+#Tips: Using collections package to use a hashtable is also fine
+#Tips: Using logical calculation XOR could be more efficient
+#       when only deal with numbers. Because ^= could not be done with two str
 
+'''
+Using XOR to deal with number arrays
+def miss_element_check(s1, s2):
+    record = 0
+    
+    for char in s1+s2:
+        record ^= char
+
+    print(record)
+
+'''
 def miss_element_check(s1, s2):
     s1 = sorted(s1.replace(" ","").lower())
     s2 = sorted(s2.replace(" ","").lower())
