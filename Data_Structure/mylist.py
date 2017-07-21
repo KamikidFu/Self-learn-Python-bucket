@@ -5,8 +5,14 @@ class LinkedList():
         
     def __len__(self):
         return self._count
-
-    def add_node(self, data):
+    
+    def add_node_at_head(self,data):
+        add = Node(data)
+        add.set_next(self._head)
+        self._head = add
+        self._count += 1
+        
+    def add_node_at_tail(self, data):
         add = Node(data)
         cur = self._head
         while(cur.has_next()):
@@ -43,7 +49,7 @@ class LinkedList():
             else:
                 pre = cur
                 cur = cur.get_next()
-        return
+        return None
 
     def del_node_by_index(self, index):
         cur = self._head
